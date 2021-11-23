@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <title>Get Rich</title>
+  </head>
+  <body>
+    <h1>Get Rich</h1>
+    <p>In order to get rich, you must understand the world, how world runs and work on your industry that you are interested. 
+      By providing either valueful service or products, you would earn something you can get.</p>
+    <h2>World Metric</h2>
+    <p>Here is some world data that could help you drive your industry.</p>
+    <ul>
+      <li>Population: <span class="row population">Loading...</div></li>
+    </ul>
+  </body>
+  <script>
+    fetch("https://d6wn6bmjj722w.population.io/1.0/population/World/today-and-tomorrow/")
+      .then(rsp => rsp.json())
+      .then(json => {
+        const population = new Intl.NumberFormat('en-US', { maximumSignificantDigits: 3 }).format(json?.total_population[0].population)
+        document.querySelector(".row.population").innerText = population;
+})
+  </script>
+      
+</html>
