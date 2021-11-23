@@ -13,8 +13,8 @@
         By providing either valueful service or products, you would earn something you can get.</p>
       <h2>World Metric</h2>
       <p>Here is some world data that could help you drive your industry.</p>
-      <ul>
-        <li>Population: <span class="row population">Loading...</div></li>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Population: <span class="population">Loading...</div></li>
       </ul>
     </div>
   </body>
@@ -23,7 +23,7 @@
       .then(rsp => rsp.json())
       .then(json => {
         const population = new Intl.NumberFormat('en-US', { maximumSignificantDigits: 3 }).format(json?.total_population[0].population)
-        document.querySelector(".row.population").innerText = population;
+        document.querySelector(".population").innerText = population;
 })
   </script>
       
