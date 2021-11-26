@@ -1,4 +1,4 @@
-# be-rich
+# get-rich
 
 ## Defenition
 People can be rich if their basic spending is balanced out their earning.
